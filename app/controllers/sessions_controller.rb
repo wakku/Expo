@@ -9,7 +9,6 @@ include SessionsHelper
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       sign_in user
-      #@user = user
       render json: user
     else 
       render json: 'Invalid email/password combination'
