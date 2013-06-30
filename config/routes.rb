@@ -1,6 +1,8 @@
 Expo::Application.routes.draw do
   resources :users, except: [:new, :edit]
 
+  post 'login', to: 'sessions#login', as: 'login'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
